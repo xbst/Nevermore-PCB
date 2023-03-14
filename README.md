@@ -4,7 +4,7 @@
 A fan/LED controller PCB for Nevermore Max air filters. More information about the Nevermore Max can be found [here](https://github.com/nevermore3d/Nevermore_Max).
 
 ## Purchasing a PCB
-Currently there are no known vendors selling an assembled Nevermore Max PCBs. You can use the included gerber files to order your own from a PCB manufacturer like [PCBWay](https://www.pcbway.com/setinvite.aspx?inviteid=374841) or [JLCPCB](https://jlcpcb.com/).
+Currently there are no known vendors selling assembled Nevermore Max PCBs. You can use the included gerber files to order your own from a PCB manufacturer like [PCBWay](https://www.pcbway.com/setinvite.aspx?inviteid=374841) or [JLCPCB](https://jlcpcb.com/).
 
 This project is licensed under [GPL v3](./LICENSE), meaning you and vendors are allowed to sell PCBs without paying me. If you'd like to support the development of this and future projects please consider [sponsoring](https://github.com/sponsors/xbst) me on GitHub. You can also subscribe on [Patreon](https://l.isiks.tech/patreon) or [YouTube](https://l.isiks.tech/member).
 
