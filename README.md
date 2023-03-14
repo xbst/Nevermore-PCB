@@ -1,5 +1,5 @@
 # Nevermore Max PCB
-[YouTube Video](https://www.youtube.com/watch?v=gtrQXdAaXB4)
+[YouTube Video](https://www.youtube.com/)
 ![PCB](./Images/PCB.jpg)
 A fan/LED controller PCB for Nevermore Max air filters. More information about the Nevermore Max can be found [here](https://github.com/nevermore3d/Nevermore_Max).
 
