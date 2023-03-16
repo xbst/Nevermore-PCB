@@ -16,7 +16,15 @@ This project is licensed under [GPL v3](./LICENSE), meaning you and vendors are 
 - RP2040 MCU
 
 ## Instructions
+### PCB Tray
+1. Remove the built-in supports.
+*Insert image*
+2. Superglue 2 magnets. Make sure the polarities are right.
+*Insert image*
+3. Mount the PCB. The plastic latches will keep the PCB in place, no screws needed. The USB/power side should be seated first.
+*Insert image*
 ### Wiring
+1. All internal connectors and the power input connector are JST-XH. Use the diagram below to wire your fans/sensors/power.
 *Insert pinout diagram*
 ### Klipper Flashing
 1. Connect the PCB to your Raspbery Pi while holding down the button on the PCB.
