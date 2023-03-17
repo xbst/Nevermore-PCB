@@ -1,12 +1,12 @@
 # Nevermore Max PCB
-[YouTube Video](https://www.youtube.com/)
-![PCB](./Images/PCB.jpg)
+[YouTube Video](soon_tm)
+![Nevermore Max PCB](./Images/PCB.jpg)
 A fan/LED controller PCB for Nevermore Max air filters. More information about the Nevermore Max can be found [here](https://github.com/nevermore3d/Nevermore_Max).
 
 ## Purchasing a PCB
 Currently there are no known vendors selling assembled Nevermore Max PCBs. You can use the included gerber files to order your own from a PCB manufacturer like [PCBWay](https://www.pcbway.com/setinvite.aspx?inviteid=374841) or [JLCPCB](https://jlcpcb.com/).
 
-This project is licensed under [GPL v3](./LICENSE), meaning you and vendors are allowed to sell PCBs without paying me. If you'd like to support the development of this and future projects please consider [sponsoring](https://github.com/sponsors/xbst) me on GitHub. You can also subscribe on [Patreon](https://l.isiks.tech/patreon) or [YouTube](https://l.isiks.tech/member).
+This project is licensed under [GPL v3](./LICENSE), meaning vendors are allowed to sell PCBs without paying me. If you'd like to support the development of this and future projects please consider [sponsoring](https://github.com/sponsors/xbst) me on GitHub. You can also subscribe on [Patreon](https://l.isiks.tech/patreon) or [YouTube](https://l.isiks.tech/member).
 
 ## Features
 - 1x 4-pin PWM fan connector with RPM monitoring
@@ -16,16 +16,16 @@ This project is licensed under [GPL v3](./LICENSE), meaning you and vendors are 
 - RP2040 MCU
 
 ## Instructions
-### PCB Tray
+### 1. PCB Tray
 1. Print the ~~bottle opener~~ Nevermore Max PCB tray using the standard Voron print settings.
 2. Remove the built-in supports.
 3. Superglue 2 magnets. Pay attention to the polarities.
 4. Mount the PCB. The plastic latches will keep the PCB in place, no screws needed. The USB/power side should be seated first.
 ![Instructions](./Images/PCB-Tray.png)
-### Wiring
+### 2. Wiring
 1. All internal connectors and the power input connector are JST-XH. Use the diagram below to wire your fans/sensors/power.
 ![Pinout](./Images/Pinout.png)
-### Klipper Flashing
+### 3. Klipper Flashing
 1. Connect the PCB to your Raspbery Pi while holding down the button on the PCB.
 2. SSH into your Raspberry Pi.
 3. Go to the Klipper directory
@@ -59,8 +59,13 @@ sudo mount /dev/sda1 /mnt
 sudo cp out/klipper.uf2 /mnt
 sudo umount /mnt
 ```
-### Klipper Config
-*Add instructions for downloading the .cfg file once it is ready.*
+### 4. Klipper Config
+1. Download the [adxlmcu.cfg](./Firmware/nevermore.cfg) file from this repo and add it to your Klipper config directory.
+2. Find your MCU address.
+```
+ls /dev/serial/by-id/*
+```
+3. Edit the nevermore.cfg file. Change the MCU serial address and edit the sensor/fan/RGB config to match your setup.
 ## YouTube
 
 I am a YouTube content creator, and these projects were designed for my videos. If you want content about these projects & more, please consider [subscribing to my YouTube channel](https://www.youtube.com/channel/UClAWYmCkHjsbaX9Wz1df2mg).
