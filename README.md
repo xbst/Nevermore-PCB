@@ -26,7 +26,7 @@ This project is licensed under [GPL v3](./LICENSE), meaning you and vendors are 
 *Insert image*
 ### Wiring
 1. All internal connectors and the power input connector are JST-XH. Use the diagram below to wire your fans/sensors/power.
-*Insert pinout diagram*
+![Pinout](./Images/Pinout.png)
 ### Klipper Flashing
 1. Connect the PCB to your Raspbery Pi while holding down the button on the PCB.
 2. SSH into your Raspberry Pi.
