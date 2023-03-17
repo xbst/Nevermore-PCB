@@ -19,11 +19,9 @@ This project is licensed under [GPL v3](./LICENSE), meaning you and vendors are 
 ### PCB Tray
 1. Print the ~~bottle opener~~ Nevermore Max PCB tray using the standard Voron print settings.
 2. Remove the built-in supports.
-*Insert image*
 3. Superglue 2 magnets. Pay attention to the polarities.
-*Insert image*
 4. Mount the PCB. The plastic latches will keep the PCB in place, no screws needed. The USB/power side should be seated first.
-*Insert image*
+![Instructions](./Images/PCB-Tray.png)
 ### Wiring
 1. All internal connectors and the power input connector are JST-XH. Use the diagram below to wire your fans/sensors/power.
 ![Pinout](./Images/Pinout.png)
