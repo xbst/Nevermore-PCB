@@ -105,6 +105,14 @@ make menuconfig
 ```
 Use the following settings:
 ```
+[*] Enable extra low-level configuration options
+    Micro-controller Architecture (STMicroelectronics STM32)  --->
+    Processor model (STM32F072)  --->
+    Bootloader offset (No bootloader)  --->
+    Clock Reference (8 MHz crystal)  --->
+    Communication interface (USB (on PA11/PA12))  --->
+    USB ids  --->
+()  GPIO pins to set at micro-controller startup
 ```
 8. Build.
 ```
