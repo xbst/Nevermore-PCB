@@ -1,33 +1,68 @@
-# Nevermore Max PCB
-[YouTube Video](soon_tm)
+# Nevermore Max & StealthMax PCBs
+~~[YouTube Video](.)~~ soon
 ![Nevermore Max PCB](./Images/PCB.jpg)
-A PCB for Nevermore Max air filters. 
-<br> More information about the Nevermore Max air filter can be found [here](https://github.com/nevermore3d/Nevermore_Max).
+<br>PCBs for Nevermore Max and StealthMax air filters. 
+<br>More information about the Nevermore Max air filter can be found [here](https://github.com/nevermore3d/Nevermore_Max), more information about the Nevermore StealthMax air filter can be found [here](https://github.com/nevermore3d/StealthMax).
 ### Features
-- 1x 4-pin PWM fan connector with RPM monitoring
-- 1x 3-pin fan connector with RPM monitoring (2-pin compatible)
-- 2x I2C connectors for air quality monitoring modules (BME280, SGP40, etc.)
-- 1x Neopixel connector
-- USB C for data and 5V, separate power input for each fan (24V max.)
+||Nevermore Max PCB|Nevermore StealthMax PCB|
+|---|---|---|
+|MCU|STM32F072 MCU|STM32F072 MCU|
+|Fans|1x 4-pin, 1x 3/2-pin|1x4-pin|
+|Sensors|2x HW I2C connectors|2x HW I2C connectors|
+|Neopixels|1x Neopixel connector|-|
+|CAN Bus|-|CAN transceiver|
+|USB|USB C|USB micro B|
+
+Stealthmax PCB is still in development and subject to changes/cancellation.
 
 ## Purchasing a PCB
-Currently there are no known vendors selling assembled Nevermore Max PCBs. You can use the included gerber files to order your own from a PCB manufacturer like [PCBWay](https://www.pcbway.com/setinvite.aspx?inviteid=374841) or [JLCPCB](https://jlcpcb.com/).
+- Isik's Tech (Me) on Etsy (US): [Max](.) ~~[StealthMax](.)~~
 
 This project is licensed under [GPL v3](./LICENSE), meaning vendors are allowed to sell PCBs without paying me. If you'd like to support the development of this and future projects please consider [sponsoring](https://github.com/sponsors/xbst) me on GitHub. You can also subscribe on [Patreon](https://l.isiks.tech/patreon) or [YouTube](https://l.isiks.tech/member).
 
+You can also use the included gerber files to order your own from a PCB manufacturer like [PCBWay](https://www.pcbway.com/setinvite.aspx?inviteid=374841) or [JLCPCB](https://jlcpcb.com/).
+<br>
+
 ## Instructions
-### 1. PCB Tray
-1. Print the ~~bottle opener~~ [Nevermore Max PCB tray](./Mounts/Nevermore-Max-PCB-Tray.stl) using the standard Voron print settings.
-2. Remove the built-in supports.
-3. Superglue 2 magnets. Pay attention to the polarities.
-4. Mount the PCB. The plastic latches will keep the PCB in place, no screws needed. The USB/power side should be seated first.
-![Instructions](./Images/PCB-Tray.png)
+### 1. PCB Mount
+<details>
+  <summary>Nevermore Max PCB</summary>
+  
+  1. Print the ~~bottle opener~~ [Nevermore Max PCB tray](./Mounts/Nevermore-Max-PCB-Tray.stl) using the standard Voron print settings.
+  2. Remove the built-in supports.
+  3. Superglue 2 magnets. Pay attention to the polarities.
+  4. Mount the PCB. The plastic latches will keep the PCB in place, no screws needed. The USB/power side should be seated first.
+     
+  ![Instructions](./Images/PCB-Tray.png)
+</details>
+<details>
+  <summary>Nevermore StealthMax PCB</summary>
+  
+  1. Mount the PCB where the Raspberry Pi Pico normally mounts with M2 screws.
+</details>
+
 ### 2. Wiring
-1. All internal connectors and the power input connector are JST-XH. Use the diagram below to wire your fans/sensors/power.
-![Pinout](./Images/Pinout.png)
-### 3. Klipper Flashing
-1. Connect the PCB to your Raspbery Pi while holding down the button on the PCB.
-2. SSH into your Raspberry Pi.
+<details>
+<summary>Nevermore Max PCB</summary>
+ 
+  1. All connectors except USB are JST-XH. Use the diagram below to wire your fans/sensors/leds/power.
+
+  ![Pinout](./Images/Max-Pinout.png)
+</details>
+<details>
+  <summary>Nevermore StealthMax PCB</summary>
+
+  1. All connectors except USB are JST-XH. Use the diagram below to wire your fans/sensors/CAN/power.
+
+  ![Pinout](./Images/SM-Pinout.png)
+</details>
+  
+### 3. Building Klipper
+1. SSH into your Raspberry Pi.
+2. Edit the `stm32f0_i2c.c` file to enable the second I2C bus on the MCU.
+```
+sudo nano klipper/src/stm32/stm32f0_i2c.c
+```
 3. Go to the Klipper directory
 ```
 cd klipper
@@ -42,30 +77,17 @@ make menuconfig
 ```
 Use the following settings:
 ```
-Micro-controller Architecture: Raspberry Pi RP2040
-Communication inferface: USB
 ```
-6. Build the firmware
+6. Build.
 ```
 make
 ```
-7. Find the storage location of the RP2040. This will usually be sda1. Use this command one time with the PCB unplugged and one time with PCB plugged in (while holding down the button on the PCB) to verify.
-```
-ls /dev/
-```
-8. Flash the firmware.
-```
-sudo mount /dev/sda1 /mnt
-sudo cp out/klipper.uf2 /mnt
-sudo umount /mnt
-```
-### 4. Klipper Config
-1. Download the [adxlmcu.cfg](./Firmware/nevermore.cfg) file from this repo and add it to your Klipper config directory.
-2. Find your MCU address.
-```
-ls /dev/serial/by-id/*
-```
-3. Edit the nevermore.cfg file. Change the MCU serial address and edit the sensor/fan/RGB config to match your setup.
+### 4. Flashing Klipper
+
+
+### 5. Klipper Config
+
+
 ## YouTube
 
 I am a YouTube content creator, and these projects were designed for my videos. If you want content about these projects & more, please consider [subscribing to my YouTube channel](https://www.youtube.com/channel/UClAWYmCkHjsbaX9Wz1df2mg).
@@ -75,5 +97,5 @@ If you feel like contributing to the development of this project and other proje
 
 ## Notes
 - This readme file contains affiliate links. I make a comission on qualifying purchases.
-- This project does not come with any warranty, if you choose to build/use a Nevermore Max PCB, you are doing this at your own risk!
+- This project does not come with any warranty, if you choose to build/use a Nevermore PCB, you are doing this at your own risk!
 - If you want to sell PCBs, you are allowed to, and you will not owe me any royalties. **You cannot claim that I endorse the sale**. You can check the license file for more information. However, if you **wish** to give me a share you can sponsor me on [GitHub](https://github.com/sponsors/xbst), subscribe on [Patreon](https://l.isiks.tech/patreon) or [YouTube](https://l.isiks.tech/member).
