@@ -63,18 +63,33 @@ You can also use the included gerber files to order your own from a PCB manufact
 ```
 sudo nano klipper/src/stm32/stm32f0_i2c.c
 ```
-3. Below ` ` add theese 2 lines:
+3. Below `DECL_CONSTANT_STR("BUS_PINS_i2c1_PB8_PB9", "PB8,PB9");` add theese 2 lines:
 ```
-
+  DECL_ENUMERATION("i2c_bus", "i2c2", 0);
+  DECL_CONSTANT_STR("BUS_PINS_i2c2", "PB10,PB11");
 ```
 So the file should look like:
 
+```
 ... (more stuff above)
-```
 
-```
+#if CONFIG_MACH_STM32F0
+  DECL_ENUMERATION("i2c_bus", "i2c1_PB6_PB7", 0);
+  DECL_CONSTANT_STR("BUS_PINS_i2c1_PB6_PB7", "PB6,PB7");
+  DECL_ENUMERATION("i2c_bus", "i2c1_PF1_PF0", 1);
+  DECL_CONSTANT_STR("BUS_PINS_i2c1_PF1_PF0", "PF1,PF0");
+  DECL_ENUMERATION("i2c_bus", "i2c1_PB8_PB9", 2);
+  DECL_CONSTANT_STR("BUS_PINS_i2c1_PB8_PB9", "PB8,PB9");
+  DECL_ENUMERATION("i2c_bus", "i2c2", 0);
+  DECL_CONSTANT_STR("BUS_PINS_i2c2", "PB10,PB11");
+  // Deprecated "i2c1a" style mappings
+  DECL_ENUMERATION("i2c_bus", "i2c1", 0);
+  DECL_CONSTANT_STR("BUS_PINS_i2c1", "PB6,PB7");
+  DECL_ENUMERATION("i2c_bus", "i2c1a", 1);
+  DECL_CONSTANT_STR("BUS_PINS_i2c1a", "PF1,PF0");
+
 ... (more stuff below)
-
+```
 4. Press `CTRL+X`, then `Y`, then `Enter` to save.
 5. Go to the Klipper directory
 ```
@@ -94,6 +109,12 @@ Use the following settings:
 8. Build.
 ```
 make
+```
+9. While you're SSH'd in, also download the python code needed for the SGP40 sensors from the Nevermore Max repo:
+```
+cd ~/klipper/klippy/extras
+sudo wget https://raw.githubusercontent.com/nevermore3d/Nevermore_Max/master/Software/Klipper/voc_algorithm.py
+sudo wget https://raw.githubusercontent.com/nevermore3d/Nevermore_Max/master/Software/Klipper/sgp40.py
 ```
 ### 4. Flashing Klipper
 
