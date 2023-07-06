@@ -63,7 +63,7 @@ You can also use the included gerber files to order your own from a PCB manufact
 ```
 sudo nano klipper/src/stm32/stm32f0_i2c.c
 ```
-3. Below `DECL_CONSTANT_STR("BUS_PINS_i2c1_PB8_PB9", "PB8,PB9");` add theese 2 lines:
+3. Below `DECL_CONSTANT_STR("BUS_PINS_i2c1_PB8_PB9", "PB8,PB9");` add these 2 lines:
 ```
   DECL_ENUMERATION("i2c_bus", "i2c2", 0);
   DECL_CONSTANT_STR("BUS_PINS_i2c2", "PB10,PB11");
