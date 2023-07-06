@@ -63,22 +63,35 @@ You can also use the included gerber files to order your own from a PCB manufact
 ```
 sudo nano klipper/src/stm32/stm32f0_i2c.c
 ```
-3. Go to the Klipper directory
+3. Below ` ` add theese 2 lines:
+```
+
+```
+So the file should look like:
+
+... (more stuff above)
+```
+
+```
+... (more stuff below)
+
+4. Press `CTRL+X`, then `Y`, then `Enter` to save.
+5. Go to the Klipper directory
 ```
 cd klipper
 ```
-4. Clean remaining files from previous build.
+6. Clean remaining files from previous build.
 ```
 make clean
 ```
-5. Choose the options for the build.
+7. Choose the options for the build.
 ```
 make menuconfig
 ```
 Use the following settings:
 ```
 ```
-6. Build.
+8. Build.
 ```
 make
 ```
