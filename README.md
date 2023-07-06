@@ -24,40 +24,7 @@ You can also use the included gerber files to order your own from a PCB manufact
 <br>
 
 ## Instructions
-### 1. PCB Mount
-<details>
-  <summary>Nevermore Max PCB</summary>
-  
-  1. Print the ~~bottle opener~~ [Nevermore Max PCB tray](./Mounts/Nevermore-Max-PCB-Tray.stl) using the standard Voron print settings.
-  2. Remove the built-in supports.
-  3. Superglue 2 magnets. Pay attention to the polarities.
-  4. Mount the PCB. The plastic latches will keep the PCB in place, no screws needed. The USB/power side should be seated first.
-     
-  ![Instructions](./Images/PCB-Tray.png)
-</details>
-<details>
-  <summary>Nevermore StealthMax PCB</summary>
-  
-  1. Mount the PCB where the Raspberry Pi Pico normally mounts with M2 screws.
-</details>
-
-### 2. Wiring
-<details>
-<summary>Nevermore Max PCB</summary>
- 
-  1. All connectors except USB are JST-XH. Use the diagram below to wire your fans/sensors/leds/power.
-
-  ![Pinout](./Images/Max-Pinout.png)
-</details>
-<details>
-  <summary>Nevermore StealthMax PCB</summary>
-
-  1. All connectors except USB are JST-XH. Use the diagram below to wire your fans/sensors/CAN/power.
-
-  ![Pinout](./Images/SM-Pinout.png)
-</details>
-  
-### 3. Building Klipper
+### 1. Flashing Klipper
 1. SSH into your Raspberry Pi.
 2. Edit the `stm32f0_i2c.c` file to enable the second I2C bus on the MCU.
 ```
@@ -120,17 +87,62 @@ Press `Q` then `Y` to save and quit the menu.
 ```
 make
 ```
-9. While you're SSH'd in, also download the python code needed for the SGP40 sensors from the Nevermore Max repo:
+
+9. Connect your Nevermore Max/StealthMax PCB to your Raspberry Pi while holding down the `BOOT` button.
+10. Use `lsusb` and find the device in DFU mode.
+11. Flash. Replace the ID with the ID from the previous step.
+```
+make flash FLASH_DEVICE=1234:5678
+```
+12. When finished, press the `RESET` button on your Nevermore Max/StealthMax PCB.
+13. Check the serial connections and find the path startting with `/dev/serial/by-id/usb-Klipper_stm32f072`. This is the serial path of your Nevermore Max/StealthMax PCB.
+```
+ls /dev/serial/by-id/*
+```
+14. While you're SSH'd in, also download the python code needed for the SGP40 sensors from the Nevermore Max repo:
 ```
 cd ~/klipper/klippy/extras
 sudo wget https://raw.githubusercontent.com/nevermore3d/Nevermore_Max/master/Software/Klipper/voc_algorithm.py
 sudo wget https://raw.githubusercontent.com/nevermore3d/Nevermore_Max/master/Software/Klipper/sgp40.py
 ```
-### 4. Flashing Klipper
 
+### 2. PCB Mount
+Follow the instructions for your PCB:
+<details>
+  <summary>Nevermore Max PCB</summary>
+  
+  1. Print the ~~bottle opener~~ [Nevermore Max PCB tray](./Mounts/Nevermore-Max-PCB-Tray.stl) using the standard Voron print settings.
+  2. Remove the built-in supports.
+  3. Superglue 2 magnets. Pay attention to the polarities.
+  4. Mount the PCB. The plastic latches will keep the PCB in place, no screws needed. The USB/power side should be seated first.
+     
+  ![Instructions](./Images/PCB-Tray.png)
+</details>
+<details>
+  <summary>Nevermore StealthMax PCB</summary>
+  
+  1. Mount the PCB where the Raspberry Pi Pico normally mounts with M2 screws.
+</details>
+  
+### 3. Wiring
+Follow the instructions for your PCB:
+<details>
+<summary>Nevermore Max PCB</summary>
+ 
+  1. All connectors except USB are JST-XH. Use the diagram below to wire your fans/sensors/leds/power.
 
-### 5. Klipper Config
+  ![Pinout](./Images/Max-Pinout.png)
+</details>
+<details>
+  <summary>Nevermore StealthMax PCB</summary>
 
+  1. All connectors except USB are JST-XH. Use the diagram below to wire your fans/sensors/CAN/power.
+
+  ![Pinout](./Images/SM-Pinout.png)
+</details>
+
+### 4. Klipper Config
+TBA
 
 ## YouTube
 
