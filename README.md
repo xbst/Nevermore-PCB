@@ -63,7 +63,7 @@ make
 make flash FLASH_DEVICE=1234:5678
 ```
 9. When finished, press the `RESET` button on your Nevermore Max/StealthMax PCB.
-10. Check the serial connections and find the path startting with `/dev/serial/by-id/usb-Klipper_stm32f072`. This is the serial path of your Nevermore Max/StealthMax PCB.
+10. Check the serial connections and find the path startting with `/dev/serial/by-id/usb-Klipper_stm32g0b1`. This is the serial path of your Nevermore Max/StealthMax PCB.
 ```
 ls /dev/serial/by-id/*
 ```
