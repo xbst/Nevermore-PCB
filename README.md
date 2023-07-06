@@ -103,7 +103,7 @@ make clean
 ```
 make menuconfig
 ```
-Use the following settings:
+Use the following options:
 ```
 [*] Enable extra low-level configuration options
     Micro-controller Architecture (STMicroelectronics STM32)  --->
@@ -114,6 +114,8 @@ Use the following settings:
     USB ids  --->
 ()  GPIO pins to set at micro-controller startup
 ```
+Press `Q` then `Y` to save and quit the menu.
+
 8. Build.
 ```
 make
