@@ -6,7 +6,7 @@
 ### Features
 ||Nevermore Max PCB|Nevermore StealthMax PCB|
 |---|---|---|
-|MCU|STM32F072 MCU|STM32F072 MCU|
+|MCU|STM32G0B1 MCU|STM32G0B1 MCU|
 |Fans|1x 4-pin, 1x 3/2-pin|1x4-pin|
 |Sensors|2x HW I2C connectors|2x HW I2C connectors|
 |Neopixels|1x Neopixel connector|-|
@@ -26,47 +26,15 @@ You can also use the included gerber files to order your own from a PCB manufact
 ## Instructions
 ### 1. Flashing Klipper
 1. SSH into your Raspberry Pi.
-2. Edit the `stm32f0_i2c.c` file to enable the second I2C bus on the MCU.
-```
-sudo nano klipper/src/stm32/stm32f0_i2c.c
-```
-3. Under `#if CONFIG_MACH_STM32F0`, below `DECL_CONSTANT_STR("BUS_PINS_i2c1_PB8_PB9", "PB8,PB9");` add these 2 lines:
-```
-  DECL_ENUMERATION("i2c_bus", "i2c2", 0);
-  DECL_CONSTANT_STR("BUS_PINS_i2c2", "PB10,PB11");
-```
-So the file should look like:
-
-```
-... (more stuff above)
-
-#if CONFIG_MACH_STM32F0
-  DECL_ENUMERATION("i2c_bus", "i2c1_PB6_PB7", 0);
-  DECL_CONSTANT_STR("BUS_PINS_i2c1_PB6_PB7", "PB6,PB7");
-  DECL_ENUMERATION("i2c_bus", "i2c1_PF1_PF0", 1);
-  DECL_CONSTANT_STR("BUS_PINS_i2c1_PF1_PF0", "PF1,PF0");
-  DECL_ENUMERATION("i2c_bus", "i2c1_PB8_PB9", 2);
-  DECL_CONSTANT_STR("BUS_PINS_i2c1_PB8_PB9", "PB8,PB9");
-  DECL_ENUMERATION("i2c_bus", "i2c2", 0);
-  DECL_CONSTANT_STR("BUS_PINS_i2c2", "PB10,PB11");
-  // Deprecated "i2c1a" style mappings
-  DECL_ENUMERATION("i2c_bus", "i2c1", 0);
-  DECL_CONSTANT_STR("BUS_PINS_i2c1", "PB6,PB7");
-  DECL_ENUMERATION("i2c_bus", "i2c1a", 1);
-  DECL_CONSTANT_STR("BUS_PINS_i2c1a", "PF1,PF0");
-
-... (more stuff below)
-```
-4. Press `CTRL+X`, then `Y`, then `Enter` to save.
-5. Go to the Klipper directory
+2. Go to the Klipper directory
 ```
 cd klipper
 ```
-6. Clean remaining files from previous build.
+3. Clean remaining files from previous build.
 ```
 make clean
 ```
-7. Choose the options for the build.
+4. Choose the options for the build.
 ```
 make menuconfig
 ```
@@ -74,7 +42,7 @@ Use the following options:
 ```
 [*] Enable extra low-level configuration options
     Micro-controller Architecture (STMicroelectronics STM32)  --->
-    Processor model (STM32F072)  --->
+    Processor model (STM32G0B1)  --->
     Bootloader offset (No bootloader)  --->
     Clock Reference (8 MHz crystal)  --->
     Communication interface (USB (on PA11/PA12))  --->
@@ -83,23 +51,23 @@ Use the following options:
 ```
 Press `Q` then `Y` to save and quit the menu.
 
-8. Build.
+5. Build.
 ```
 make
 ```
 
-9. Connect your Nevermore Max/StealthMax PCB to your Raspberry Pi while holding down the `BOOT` button.
-10. Use `lsusb` and find the device in DFU mode.
-11. Flash. Replace the ID with the ID from the previous step.
+6. Connect your Nevermore Max/StealthMax PCB to your Raspberry Pi while holding down the `BOOT` button.
+7. Use `lsusb` and find the device in DFU mode.
+8. Flash. Replace the ID with the ID from the previous step.
 ```
 make flash FLASH_DEVICE=1234:5678
 ```
-12. When finished, press the `RESET` button on your Nevermore Max/StealthMax PCB.
-13. Check the serial connections and find the path startting with `/dev/serial/by-id/usb-Klipper_stm32f072`. This is the serial path of your Nevermore Max/StealthMax PCB.
+9. When finished, press the `RESET` button on your Nevermore Max/StealthMax PCB.
+10. Check the serial connections and find the path startting with `/dev/serial/by-id/usb-Klipper_stm32f072`. This is the serial path of your Nevermore Max/StealthMax PCB.
 ```
 ls /dev/serial/by-id/*
 ```
-14. While you're SSH'd in, also download the python code needed for the SGP40 sensors from the Nevermore Max repo:
+11. While you're SSH'd in, also download the python code needed for the SGP40 sensors from the Nevermore Max repo:
 ```
 cd ~/klipper/klippy/extras
 sudo wget https://raw.githubusercontent.com/nevermore3d/Nevermore_Max/master/Software/Klipper/voc_algorithm.py
