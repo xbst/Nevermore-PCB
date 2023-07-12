@@ -39,6 +39,9 @@ make clean
 make menuconfig
 ```
 Use the following options:
+<details>
+  <summary>Nevermore Max PCB & Nevermore StealthMax PCB (CAN)</summary>
+
 ```
 [*] Enable extra low-level configuration options
     Micro-controller Architecture (STMicroelectronics STM32)  --->
@@ -49,6 +52,23 @@ Use the following options:
     USB ids  --->
 ()  GPIO pins to set at micro-controller startup
 ```
+
+</details>
+<details>
+  <summary>Nevermore StealthMax PCB (CAN)</summary>
+
+```
+[*] Enable extra low-level configuration options
+    Micro-controller Architecture (STMicroelectronics STM32)  --->
+    Processor model (STM32G0B1)  --->
+    Bootloader offset (No bootloader)  --->
+    Clock Reference (8 MHz crystal)  --->
+    Communication interface (CAN bus (on PB0/PB1))  --->
+(1000000) CAN bus speed
+()  GPIO pins to set at micro-controller startup
+```
+
+</details>
 Press `Q` then `Y` to save and quit the menu.
 
 5. Build.
