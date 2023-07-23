@@ -40,7 +40,7 @@ make menuconfig
 ```
 Use the following options:
 <details>
-  <summary>Nevermore Max PCB & Nevermore StealthMax PCB (CAN)</summary>
+  <summary>Nevermore Max PCB & Nevermore StealthMax PCB (USB)</summary>
 
 ```
 [*] Enable extra low-level configuration options
@@ -87,11 +87,16 @@ make flash FLASH_DEVICE=1234:5678
 ```
 ls /dev/serial/by-id/*
 ```
-11. While you're SSH'd in, also download the python code needed for the SGP40 sensors from the Nevermore Max repo:
+11. While you're SSH'd in, also download the python code needed for the SGP40 sensors from the [Nevermore Max repo](https://github.com/nevermore3d/Nevermore_Max).
 ```
-cd ~/klipper/klippy/extras
-sudo wget https://raw.githubusercontent.com/nevermore3d/Nevermore_Max/master/Software/Klipper/voc_algorithm.py
-sudo wget https://raw.githubusercontent.com/nevermore3d/Nevermore_Max/master/Software/Klipper/sgp40.py
+sudo wget https://raw.githubusercontent.com/nevermore3d/Nevermore_Max/master/Software/Klipper/sgp40.py -P ~/klipper/klippy/extras
+sudo wget https://raw.githubusercontent.com/nevermore3d/Nevermore_Max/master/Software/Klipper/voc_algorithm.py -P ~/klipper/klippy/extras
+sudo service klipper restart
+```
+12. Run these commands if you are using Mainsail and want the SGP40s displayed on the dashboard:
+```
+cd ~/mainsail/
+grep -l additionalSensors * -R | xargs sed -i 's+additionalSensors=\[+additionalSensors=\["sgp40",+g'
 ```
 
 ### 2. PCB Mount
@@ -130,7 +135,9 @@ Follow the instructions for your PCB:
 </details>
 
 ### 4. Klipper Config
-TBA
+1. Download the [Klipper config](./Firmware/max.cfg), and upload it to your printer.
+2. Open the file and edit according to your setup.
+3. Add `[include max.cfg]` in your `printer.cfg`.
 
 ## YouTube
 
