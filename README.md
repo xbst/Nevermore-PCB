@@ -1,3 +1,5 @@
+### Testing of the Nevermore Max 2 PCB is finally finished, this repo will be updated with some pictures, source files and gerbers soon. StealthMax PCB is in early development so that may take a few months.
+
 # Nevermore Max & StealthMax PCBs
 ~~[YouTube Video](.)~~ soon™
 ![Nevermore Max PCB & Nevermore StealthMax PCB](./Images/PCBs.jpg)
