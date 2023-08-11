@@ -3,8 +3,8 @@
 # Nevermore Max & StealthMax PCBs
 ~~[YouTube Video](.)~~ soon™
 ![Nevermore Max PCB & Nevermore StealthMax PCB](./Images/PCBs.jpg)
-<br>PCBs for Nevermore Max and StealthMax air filters. 
-<br>More information about the Nevermore Max air filter can be found [here](https://github.com/nevermore3d/Nevermore_Max), more information about the Nevermore StealthMax air filter can be found [here](https://github.com/nevermore3d/StealthMax).
+<br>PCBs for Nevermore Max 2 and Nevermore StealthMax air filters. 
+<br>More information about the Nevermore Max 2 air filter can be found [here](https://github.com/nevermore3d/Nevermore_Max), more information about the Nevermore StealthMax air filter can be found [here](https://github.com/nevermore3d/StealthMax).
 ### Features
 ||Nevermore Max PCB|Nevermore StealthMax PCB|
 |---|---|---|
