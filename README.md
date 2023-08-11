@@ -1,5 +1,5 @@
 # Nevermore Max & StealthMax PCBs
-~~[YouTube Video](.)~~ soon
+~~[YouTube Video](.)~~ soon™
 ![Nevermore Max PCB & Nevermore StealthMax PCB](./Images/PCBs.jpg)
 <br>PCBs for Nevermore Max and StealthMax air filters. 
 <br>More information about the Nevermore Max air filter can be found [here](https://github.com/nevermore3d/Nevermore_Max), more information about the Nevermore StealthMax air filter can be found [here](https://github.com/nevermore3d/StealthMax).
@@ -8,15 +8,17 @@
 |---|---|---|
 |MCU|STM32G0B1 MCU|STM32G0B1 MCU|
 |Fans|1x 4-pin, 1x 3/2-pin|1x4-pin|
-|Sensors|2x HW I2C connectors|2x HW I2C connectors|
-|Neopixels|1x Neopixel connector|-|
-|CAN Bus|-|CAN transceiver|
+|Sensors|2x HW I2C|2x HW I2C|
+|Neopixels|1x Neopixel|-|
+|CAN Bus|-|Yes (Optional)|
 |USB|USB C|USB micro B|
 
 Stealthmax PCB is still in development and subject to changes/cancellation.
 
 ## Purchasing a PCB
-- Isik's Tech (Me) on Etsy (US): ~~[Max](.)~~ ~~[StealthMax](.)~~ soon™
+|Store|Max|StealthMax|
+|---|---|---|
+|Isik's Tech (Me) on Etsy (US)|soon™|this decade™|
 
 This project is licensed under [GPL v3](./LICENSE), meaning vendors are allowed to sell PCBs without paying me. If you'd like to support the development of this and future projects please consider [sponsoring](https://github.com/sponsors/xbst) me on GitHub. You can also subscribe on [Patreon](https://l.isiks.tech/patreon) or [YouTube](https://l.isiks.tech/member).
 
