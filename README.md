@@ -1,5 +1,3 @@
-### Testing of the Nevermore Max 2 PCB is finally finished, this repo will be updated with some pictures, source files and gerbers soon. StealthMax PCB is in early development so that may take a few months.
-
 # Nevermore Max & StealthMax PCBs
 ~~[YouTube Video](.)~~ soon™
 ![Nevermore Max PCB & Nevermore StealthMax PCB](./Images/PCBs.jpg)
@@ -15,12 +13,12 @@
 |CAN Bus|-|Yes (Optional)|
 |USB|USB C|USB micro B|
 
-Stealthmax PCB is still in development and subject to changes/cancellation.
+### Stealthmax PCB is still in development and subject to changes/cancellation.
 
 ## Purchasing a PCB
 |Store|Max|StealthMax|
 |---|---|---|
-|Isik's Tech (Me) on Etsy (US)|soon™|this decade™|
+|Isik's Tech (Me) on Etsy (US)|[Max](https://www.etsy.com/listing/1516812684/nevermore-max-controller-pcb)|soon™|
 
 This project is licensed under [GPL v3](./LICENSE), meaning vendors are allowed to sell PCBs without paying me. If you'd like to support the development of this and future projects please consider [sponsoring](https://github.com/sponsors/xbst) me on GitHub. You can also subscribe on [Patreon](https://l.isiks.tech/patreon) or [YouTube](https://l.isiks.tech/member).
 
