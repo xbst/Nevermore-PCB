@@ -18,7 +18,7 @@
 ## Purchasing a PCB
 |Store|Max|StealthMax|
 |---|---|---|
-|Isik's Tech (Me) on Etsy (US)|[Max](https://www.etsy.com/listing/1516812684/nevermore-max-controller-pcb)|-|
+|Isik's Tech (Me) on Etsy (US)|[Max](https://isikstech.etsy.com/listing/1516812684/nevermore-max-controller-pcb?utm_source=Copy&utm_medium=ListingManager&utm_campaign=Share&utm_term=so.lmsm&share_time=1694159301059)|-|
 |XR Bunker (US)|[Max](https://xrbunker.works/products/nevermore-max-2-red-pcb-by-xbst_isik)|-|
 
 This project is licensed under [GPL v3](./LICENSE), meaning vendors are allowed to sell PCBs without paying me. If you'd like to support the development of this and future projects please consider [sponsoring](https://github.com/sponsors/xbst) me on GitHub. You can also subscribe on [Patreon](https://l.isiks.tech/patreon) or [YouTube](https://l.isiks.tech/member).
