@@ -16,9 +16,11 @@
 ### Stealthmax PCB is still in development and subject to changes/cancellation.
 
 ## Purchasing a PCB
+### United States
 |Store|Max|StealthMax|
 |---|---|---|
-|XR Bunker (US)|[Max](https://xrbunker.works/products/nevermore-max-2-red-pcb-by-xbst_isik)|-|
+|Isik's Tech (Me)|[Max](https://store.isiks.tech/products/nevermore-max-controller-pcb)|-|
+|XR Bunker|[Max](https://xrbunker.works/products/nevermore-max-2-red-pcb-by-xbst_isik)|-|
 
 This project is licensed under [GPL v3](./LICENSE), meaning vendors are allowed to sell PCBs without paying me. If you'd like to support the development of this and future projects please consider [sponsoring](https://github.com/sponsors/xbst) me on GitHub. You can also subscribe on [Patreon](https://l.isiks.tech/patreon) or [YouTube](https://l.isiks.tech/member).
 
