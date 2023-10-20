@@ -68,24 +68,61 @@ Use the following options:
 ```
 
 </details>
+
 Press `Q` then `Y` to save and quit the menu.
 
 5. Build.
 ```
 make
 ```
+<details>
+  <summary>Nevermore Max PCB & Nevermore StealthMax PCB (USB)</summary>
 
-6. Connect your Nevermore Max/StealthMax PCB to your Raspberry Pi while holding down the `BOOT` button.
-7. Use `lsusb` and find the device in DFU mode.
-8. Flash. Replace the ID with the ID from the previous step.
-```
-make flash FLASH_DEVICE=1234:5678
-```
-9. When finished, press the `RESET` button on your Nevermore Max/StealthMax PCB.
-10. Check the serial connections and find the path startting with `/dev/serial/by-id/usb-Klipper_stm32g0b1`. This is the serial path of your Nevermore Max/StealthMax PCB.
-```
-ls /dev/serial/by-id/*
-```
+  6. Connect your Nevermore Max/StealthMax PCB to your Raspberry Pi while holding down the `BOOT` button.
+  7.  Use `lsusb` and find the device in DFU mode.
+  8.   Flash. Replace the ID with the ID from the previous step.
+  ```
+  make flash FLASH_DEVICE=1234:5678
+  ```
+  9. When finished, press the `RESET` button on your Nevermore Max/StealthMax PCB.
+  10. Check the serial connections and find the path startting with `/dev/serial/by-id/usb-Klipper_stm32g0b1`. This is the serial path of your Nevermore Max/StealthMax PCB.
+  ```
+  ls /dev/serial/by-id/*
+  ```
+
+</details>
+<details>
+  <summary>Nevermore StealthMax PCB (Non-CanBoot CAN)</summary>
+
+  6. Connect your Nevermore Max/StealthMax PCB to your Raspberry Pi while holding down the `BOOT` button.
+  7.  Use `lsusb` and find the device in DFU mode.
+  8.   Flash. Replace the ID with the ID from the previous step.
+  ```
+  make flash FLASH_DEVICE=1234:5678
+  ```
+  9. When finished, press the `RESET` button on your Nevermore Max/StealthMax PCB.
+  10. Find the CAN Bus UUID using the instrucitons on [Klipper's website](https://www.klipper3d.org/CANBUS.html#finding-the-canbus_uuid-for-new-micro-controllers)
+
+</details>
+<details>
+  <summary>Nevermore StealthMax PCB (CAN - CanBoot)</summary>
+  
+  6. Install/Build CanBoot using the [instructions](https://github.com/Arksine/katapult) on its repo. Use these settings to build CanBoot:
+  ```
+    [ ] Enable extra low-level configuration options
+        Micro-controller Architecture (STMicroelectronics STM32)  --->
+        Processor model (STM32G0B1)  --->
+        Bootloader offset (8KiB bootloader)  --->
+        Communication interface (USB (on PA11/PA12))  --->
+  ```
+  7. Connect your Nevermore Max/StealthMax PCB to your Raspberry Pi while holding down the `BOOT` button. Flash CanBoot using the [instructions](https://github.com/Arksine/katapult) on its repo.
+  8. When finished, press the `RESET` button on your Nevermore Max/StealthMax PCB.
+  9. Flash the Klipper build we creater earlier using the [instructions](https://github.com/Arksine/katapult) on CanBoot's repo.
+  10. Find the CAN Bus UUID using the instrucitons on [Klipper's website](https://www.klipper3d.org/CANBUS.html#finding-the-canbus_uuid-for-new-micro-controllers)
+   
+</details>
+
+
 11. While you're SSH'd in, also download the python code needed for the SGP40 sensors from the [Nevermore Max repo](https://github.com/nevermore3d/Nevermore_Max).
 ```
 sudo wget https://raw.githubusercontent.com/nevermore3d/Nevermore_Max/master/Software/Klipper/sgp40.py -P ~/klipper/klippy/extras
