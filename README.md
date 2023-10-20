@@ -28,7 +28,14 @@ You can also use the included gerber files to order your own from a PCB manufact
 <br>
 
 ## Instructions
-### 1. Flashing Klipper
+### 1. MCU Prep
+IMPORTANT: If you skip this step, you won't be able to reflash firmware after the initial flash.
+1. Connect your PCB to your PC using a USB cable, while holding the BOOT button down.
+2. Download and install [STM32Cube Programmer](https://www.st.com/en/development-tools/stm32cubeprog.html). (Do not download the latest version, it is buggy)
+3. Select `USB` on the selecor in top right of the program (below `Not connected`). Click the refresh button next to the port selector. Select `USB1` and click connect.
+4. Select `OB` on the left side, expand `User Configuration`, uncheck `nBOOT_SEL`. Click `Apply`.
+
+### 2. Flashing Klipper
 1. SSH into your Raspberry Pi.
 2. Go to the Klipper directory
 ```
@@ -103,7 +110,7 @@ cd ~/mainsail/
 grep -l additionalSensors * -R | xargs sed -i 's+additionalSensors=\[+additionalSensors=\["sgp40",+g'
 ```
 
-### 2. PCB Mount
+### 3. PCB Mount
 Follow the instructions for your PCB:
 <details>
   <summary>Nevermore Max PCB</summary>
@@ -121,7 +128,7 @@ Follow the instructions for your PCB:
   1. Mount the PCB where the Raspberry Pi Pico normally mounts with M2 screws.
 </details>
   
-### 3. Wiring
+### 4. Wiring
 Follow the instructions for your PCB:
 <details>
 <summary>Nevermore Max PCB</summary>
@@ -138,7 +145,7 @@ Follow the instructions for your PCB:
   ![Pinout](./Images/SM-Pinout.png)
 </details>
 
-### 4. Klipper Config
+### 5. Klipper Config
 1. Download the [Klipper config](./Firmware/max.cfg), and upload it to your printer.
 2. Open the file and edit according to your setup.
 3. Add `[include max.cfg]` in your `printer.cfg`.
