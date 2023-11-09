@@ -27,7 +27,7 @@ This project is licensed under [GPL v3](./LICENSE), meaning vendors are allowed 
 You can also use the included gerber files to order your own from a PCB manufacturer like [PCBWay](https://www.pcbway.com/setinvite.aspx?inviteid=374841) or [JLCPCB](https://jlcpcb.com/).
 <br>
 
-### [Instructions](./INSTRUCTIONS.md)
+### [Instructions](./Docs/INSTRUCTIONS.md)
 
 ## YouTube
 
