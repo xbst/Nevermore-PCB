@@ -37,7 +37,5 @@ Connect your ST-Link wires to the pads highlighted above.
 9. Reset the nBOOT_SEL setting: ```sudo ./build/Release/bin/st-flash --connect-under-reset --area=option write 0xfedffeaa```
 10. If there were no errors, you should be able to enter DFU mode now. Unsolder all wires, connect your PCB while holding the BOOT button down. You should be able to see your PCB in DFU mode. You can use `lsusb` to see if it's in DFU mode.
 
-Rest is coming soon. DM me if you need them now.
-
 ## Notes
 - This readme file contains affiliate links. I earn a comission on qualifying purchases.
