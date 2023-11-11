@@ -4,13 +4,13 @@ If you cannot enter DFU mode by holding down the BOOT button, your PCB might be 
 ### 1. ST-Link
 |Source|Link|
 |------|----|
-|Amazon US|[Link](https://www.amazon.com/HiLetgo-Emulator-Downloader-Programmer-STM32F103C8T6/dp/B07SQV6VLZ)|
+|Amazon US|[Link](https://amzn.to/474WZEU)|
 |Aliexpress|[Link](https://s.click.aliexpress.com/e/_DluRpA7)|
 ### 2. Dupont Wires
 Your ST-Link might come with some in the package. If it doesn't:
 |Source|Link|
 |------|----|
-|Amazon US|[Link](https://www.amazon.com/Elegoo-EL-CP-004-Multicolored-Breadboard-arduino/dp/B01EV70C78)|
+|Amazon US|[Link](https://amzn.to/3SClTaO)|
 |Aliexpress|[Link](https://s.click.aliexpress.com/e/_DDWGigj)|
 ### 3. Soldering Supplies
 You'll need to solder some male dupont wires on the PCB, so you need a soldering iron and solder.
