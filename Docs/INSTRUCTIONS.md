@@ -145,7 +145,7 @@ Follow the instructions for your PCB:
   3. Superglue 2 magnets. Pay attention to the polarities.
   4. Mount the PCB. The plastic latches will keep the PCB in place, no screws needed. The USB/power side should be seated first.
      
-  ![Instructions](./Images/PCB-Tray.png)
+  ![Instructions](../Images/PCB-Tray.png)
 </details>
 <details>
   <summary>Nevermore StealthMax PCB</summary>
@@ -160,14 +160,14 @@ Follow the instructions for your PCB:
  
   1. All connectors except USB are JST-XH. Use the diagram below to wire your fans/sensors/leds/power.
 
-  ![Pinout](./Images/Max-Pinout.png)
+  ![Pinout](../Images/Max-Pinout.png)
 </details>
 <details>
   <summary>Nevermore StealthMax PCB</summary>
 
   1. All connectors except USB are JST-PH. Use the diagram below to wire your fans/sensors/CAN/power.
 
-  ![Pinout](./Images/SM-Pinout.png)
+  ![Pinout](../Images/SM-Pinout.png)
 </details>
 
 ### 5. Klipper Config
