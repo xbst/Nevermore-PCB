@@ -140,7 +140,7 @@ Follow the instructions for your PCB:
 <details>
   <summary>Nevermore Max PCB</summary>
   
-  1. Print the ~~bottle opener~~ [Nevermore Max PCB tray](./Mounts/Nevermore-Max-PCB-Tray.stl) using the standard Voron print settings.
+  1. Print the ~~bottle opener~~ [Nevermore Max PCB tray](../Mounts/Nevermore-Max-PCB-Tray.stl) using the standard Voron print settings.
   2. Remove the built-in supports.
   3. Superglue 2 magnets. Pay attention to the polarities.
   4. Mount the PCB. The plastic latches will keep the PCB in place, no screws needed. The USB/power side should be seated first.
@@ -171,6 +171,6 @@ Follow the instructions for your PCB:
 </details>
 
 ### 5. Klipper Config
-1. Download the [Klipper config](./Firmware/max.cfg), and upload it to your printer.
+1. Download the [Klipper config](../Firmware/max.cfg), and upload it to your printer.
 2. Open the file and edit according to your setup.
 3. Add `[include max.cfg]` in your `printer.cfg`.
