@@ -109,11 +109,18 @@ make
   
   6. Install/Build CanBoot using the [instructions](https://github.com/Arksine/katapult) on its repo. Use these settings to build CanBoot:
   ```
-    [ ] Enable extra low-level configuration options
-        Micro-controller Architecture (STMicroelectronics STM32)  --->
-        Processor model (STM32G0B1)  --->
-        Bootloader offset (8KiB bootloader)  --->
-        Communication interface (USB (on PA11/PA12))  --->
+    Micro-controller Architecture (STMicroelectronics STM32)  --->
+    Processor model (STM32G0B1)  --->
+    Build Katapult deployment application (Do not build)  --->
+    Clock Reference (8 MHz crystal)  --->
+    Communication interface (CAN bus (on PB0/PB1))  --->
+    Application start offset (8KiB offset)  --->
+(1000000) CAN bus speed
+()  GPIO pins to set on bootloader entry
+[*] Support bootloader entry on rapid double click of reset button
+[ ] Enable bootloader entry on button (or gpio) state
+[*] Enable Status LED
+(PA13)  Status LED GPIO Pin
   ```
   7. Connect your Nevermore Max/StealthMax PCB to your Raspberry Pi while holding down the `BOOT` button. Flash CanBoot using the [instructions](https://github.com/Arksine/katapult) on its repo.
   8. When finished, press the `RESET` button on your Nevermore Max/StealthMax PCB.
