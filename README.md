@@ -14,7 +14,7 @@
 |Neopixels|1x Neopixel|1x Neopixel|-|
 |CAN Bus|-|Yes|Yes|
 |12V & 5V Regulators|-|-|Yes|
-|UV LED Control|-|-|1x MOSFET & 1x PWM|
+|UV LED Control|-|-|1x MOSFET, 1x PWM|
 |Peltier Control|-|-|1x MOSFET|
 |Thermistors|-|-|1x On-PCB, 1x Connector|
 |Connectors|JST-XH, USB C|JST-PH, USB Micro-B|JST-PH, USB C, XT30(2+2), MX3.0|
