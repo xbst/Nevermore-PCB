@@ -1,4 +1,4 @@
-# Nevermore Mini And Stealthmax PCB Instructions
+# Nevermore Stealthmax PCB 2 Instructions
 
 ## Firmware Flashing
 
