@@ -7,7 +7,7 @@
 1. SSH into your Raspberry Pi.
 2. Download the STM32G0 legacy nBOOT_SEL setting file from [its repo](https://github.com/olikraus/stm32g031/tree/main/enable_boot0).  `sudo wget https://raw.githubusercontent.com/olikraus/stm32g031/main/enable_boot0/enable_boot0.hex`
 3. Convert the hex file you downloaded to binary. `objcopy --input-target=ihex --output-target=binary enable_boot0.hex enable_boot0.bin`
-4. Connect your Nevermore Max/StealthMax PCB to your Raspberry Pi while holding down the `BOOT` button.
+4. Connect your Nevermore Max PCB to your Raspberry Pi while holding down the `BOOT` button.
 5. Use `lsusb` to make sure you can see the device in DFU mode.
 6. Flash the binary file to enable legacy nBOOT_SEL mode. `sudo dfu-util -a 0 -d 0483:df11 --dfuse-address 0x08000000:leave -D enable_boot0.bin`
 7. Hold down the `BOOT` button on your PCB. While holding it down, press `RESET`, then release `BOOT`. Alternatively, you can unplug the PCB then plug it in again while holding down the `BOOT` button. Use `lsusb` again to make sure you can see the device in DFU mode
@@ -28,8 +28,8 @@ Press `Q` then `Y` to save and quit the menu.
 
 11. Build. `make`
 12. Flash. `make flash FLASH_DEVICE=0483:df11`
-13. When finished, press the `RESET` button on your Nevermore Max/StealthMax PCB.
-14. Use  `ls /dev/serial/by-id/*` to find the path startting with `/dev/serial/by-id/usb-Klipper_stm32g0b1`. This is the serial path of your Nevermore Max/StealthMax PCB.
+13. When finished, press the `RESET` button on your Nevermore Max PCB.
+14. Use  `ls /dev/serial/by-id/*` to find the path startting with `/dev/serial/by-id/usb-Klipper_stm32g0b1`. This is the serial path of your Nevermore Max PCB.
 15. While you're SSH'd in, also download the python code needed for the SGP40 sensors from the [Nevermore Max repo](https://github.com/nevermore3d/Nevermore_Max).
 ```
 sudo wget https://raw.githubusercontent.com/nevermore3d/Nevermore_Max/master/Software/Klipper/sgp40.py -P ~/klipper/klippy/extras
