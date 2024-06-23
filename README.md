@@ -1,4 +1,4 @@
-# Nevermore Mini, Max & StealthMax PCBs
+# Nevermore Mini, Max & Stealthmax PCBs
 | Nevermore Max 2 PCB | Nevermore Mini & Stealthmax PCB | Nevermore Stealthmax PCB 2|
 | --- | --- | --- |
 |<img src="./Images/Max.jpg" width="360"/>|<img src="./Images/SM.jpg" width="360"/>|<img src="./Images/SM2.jpg" width="360"/>|
@@ -44,7 +44,7 @@ You can also use the included gerber files to order your own from a PCB manufact
 
 ## YouTube
 
-I am a YouTube content creator, and these projects were designed for my videos. If you want content about these projects & more, please consider [subscribing to my YouTube channel](https://www.youtube.com/channel/UClAWYmCkHjsbaX9Wz1df2mg).
+I am a YouTube content creator. If you want content about these projects & more, please consider [subscribing to my YouTube channel](https://www.youtube.com/channel/UClAWYmCkHjsbaX9Wz1df2mg).
 <br>
 
 If you feel like contributing to the development of this project and other projects like this you can sponsor me on [GitHub](https://github.com/sponsors/xbst), subscribe on [Patreon](https://l.isiks.tech/patreon) or [YouTube](https://l.isiks.tech/member).
