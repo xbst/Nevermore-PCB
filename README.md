@@ -1,12 +1,12 @@
 # Nevermore Mini, Max & StealthMax PCBs
-| Nevermore Max 2 PCB | Nevermore Mini & StealthMax v1 PCB | Nevermore StealthMax v2 PCB |
+| Nevermore Max 2 PCB | Nevermore Mini & Stealthmax PCB | Nevermore Stealthmax PCB 2|
 | --- | --- | --- |
-| ![Nevermore Max PCB](./Images/Max.jpg) | ![Nevermore StealthMax PCB](./Images/SM.jpg) | ![Nevermore StealthMax 2 PCB](./Images/SM2.jpg) |
+|<img src="./Images/Max.jpg" width="360"/>|<img src="./Images/SM.jpg" width="360"/>|<img src="./Images/SM2.jpg" width="360"/>|
 
-<br>PCBs for Nevermore Mini, Nevermore Max and Nevermore StealthMax air filters. 
-<br>More information about the Nevermore Max 2 air filter can be found [here](https://github.com/nevermore3d/Nevermore_Max), more information about the Nevermore StealthMax air filter can be found [here](https://github.com/nevermore3d/StealthMax), more information about the Nevermore Mini air filter can be found [here](https://www.printables.com/model/757663-nevermore-mini-3d-printer-hepa-and-carbon-air-filt).
+<br>PCBs for Nevermore Mini, Nevermore Max and Nevermore Stealthmax air filters. 
+<br>More information about the Nevermore Max 2 air filter can be found [here](https://github.com/nevermore3d/Nevermore_Max), more information about the Nevermore Stealthmax air filter can be found [here](https://github.com/nevermore3d/StealthMax), more information about the Nevermore Mini air filter can be found [here](https://www.printables.com/model/757663-nevermore-mini-3d-printer-hepa-and-carbon-air-filt).
 ### Features
-||Nevermore Max 2 PCB|Nevermore Mini & StealthMax v1 PCB| Nevermore StealthMax v2 PCB|
+|| Nevermore Max 2 PCB | Nevermore Mini & Stealthmax PCB | Nevermore Stealthmax PCB 2|
 |---|---|---|---|
 |MCU|STM32G0B1 MCU|STM32G0B1 MCU|STM32G0B1 MCU|
 |Fans|1x 4-pin, 1x 3/2-pin|1x4-pin|1x4-pin|
@@ -21,7 +21,7 @@
 
 ## Purchasing a PCB
 ### United States
-|Store|Max|Mini & StealthMax v1|StealthMax v2|
+|Store|Max|Mini & Stealthmax|Stealthmax 2|
 |---|---|---|---|
 |Isik's Tech (Me)|[Max](https://store.isiks.tech/products/nevermore-max-controller-pcb)|[StealthMax v1](https://store.isiks.tech/products/nevermore-stealthmax-pxb)|Soon|
 |XR Bunker|[Max](https://xrbunker.works/products/nevermore-max-2-red-pcb-by-xbst_isik)|-||
@@ -32,7 +32,7 @@ You can also use the included gerber files to order your own from a PCB manufact
 <br>
 
 ### Instructions
-[Max, Mini, StealthMax v1](./Docs/INSTRUCTIONS.md)
+[Max, Mini, Stealthmax v1](./Docs/INSTRUCTIONS.md)
 
 ## YouTube
 
