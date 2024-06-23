@@ -4,7 +4,10 @@
 |<img src="./Images/Max.jpg" width="360"/>|<img src="./Images/SM.jpg" width="360"/>|<img src="./Images/SM2.jpg" width="360"/>|
 
 <br>PCBs for Nevermore Mini, Nevermore Max and Nevermore Stealthmax air filters. 
-<br>More information about the Nevermore Max 2 air filter can be found [here](https://github.com/nevermore3d/Nevermore_Max), more information about the Nevermore Stealthmax air filter can be found [here](https://github.com/nevermore3d/StealthMax), more information about the Nevermore Mini air filter can be found [here](https://www.printables.com/model/757663-nevermore-mini-3d-printer-hepa-and-carbon-air-filt).
+<br>More information about the Nevermore Max 2 air filter can be found [here](https://github.com/nevermore3d/Nevermore_Max)
+<br>More information about the Nevermore Stealthmax air filter can be found [here](https://github.com/nevermore3d/StealthMax)
+<br>More information about the Nevermore Mini air filter can be found [here](https://www.printables.com/model/757663-nevermore-mini-3d-printer-hepa-and-carbon-air-filt).
+
 ### Features
 || Nevermore Max 2 PCB | Nevermore Mini & Stealthmax PCB | Nevermore Stealthmax PCB 2|
 |---|---|---|---|
