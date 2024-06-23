@@ -11,16 +11,19 @@
 ### Features
 || Nevermore Max 2 PCB | Nevermore Mini & Stealthmax PCB | Nevermore Stealthmax PCB 2|
 |---|---|---|---|
+||<img src="./Images/Max.jpg" width="360"/>|<img src="./Images/SM.jpg" width="360"/>|<img src="./Images/SM2.jpg" width="360"/>|
 |MCU|STM32G0B1 MCU|STM32G0B1 MCU|STM32G0B1 MCU|
 |Fans|1x 4-pin, 1x 3/2-pin|1x4-pin|1x4-pin|
 |Sensors|2x HW I2C|2x HW I2C, 1x Optional Sensor Module Mount|2x HW I2C|
 |Neopixels|1x Neopixel|1x Neopixel|-|
-|CAN Bus|-|Yes|Yes|
-|12V & 5V Regulators|-|-|Yes|
+|CAN Bus|-|Yes, 1M|Yes, 1M|
+|12V Regulator|-|-|Yes, Max. 12V@5A, From 24V|
+|5V Regulator|-|-|Yes, From 24V, Turns Off w/ USB to Use USB 5V|
+|3.3V Regulator|Yes, From 5V|Yes, From 5V|Yes, From 5V|
 |UV LED Control|-|-|1x MOSFET, 1x PWM|
 |Peltier Control|-|-|1x MOSFET|
-|Thermistors|-|-|1x On-PCB, 1x Connector|
-|Connectors|JST-XH, USB C|JST-PH, USB Micro-B|JST-PH, USB C, XT30(2+2), MX3.0|
+|Thermistors|-|-|1x On-PCB 3950, 1x Connector|
+|Connectors|JST-XH, USB C|JST-PH, USB Micro-B|JST-PH, USB C, XT30(2+2), MX3.0 (for Peltier)|
 
 ## Purchasing a PCB
 ### United States
