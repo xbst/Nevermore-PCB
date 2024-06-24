@@ -25,12 +25,12 @@
 |Thermistors|-|-|1x On-PCB 3950, 1x Connector|
 |Connectors|JST-XH, USB C|JST-PH, USB Micro-B|JST-PH, USB C, XT30(2+2), MX3.0 (for Peltier)|
 
-## Purchasing a PCB
+## Purchasing a Nevermore PCB
 ### United States
 |Store|Max|Mini & Stealthmax|Stealthmax 2|
 |---|---|---|---|
-|Isik's Tech (Me)|[Max](https://store.isiks.tech/products/nevermore-max-controller-pcb)|[Mini & Stealthmax](https://store.isiks.tech/products/nevermore-stealthmax-pxb)|Soon|
-|XR Bunker|[Max](https://xrbunker.works/products/nevermore-max-2-red-pcb-by-xbst_isik)|-||
+|Isik's Tech (Me)|[PCB](https://store.isiks.tech/products/nevermore-max-controller-pcb)<br>~~[Bundle](.)~~ Discontinued|[PCB](https://store.isiks.tech/products/nevermore-stealthmax-pxb)<br>[Bundle](https://store.isiks.tech/products/nevermore-stealthmax-bundle)|[PCB](.)<br>[Bundle](.)|
+|XR Bunker|[PCB](https://xrbunker.works/products/nevermore-max-2-red-pcb-by-xbst_isik)|-|-|
 
 This project is licensed under [GPL v3](./LICENSE), meaning vendors are allowed to sell PCBs without paying me. If you'd like to support the development of this and future projects please consider [sponsoring](https://github.com/sponsors/xbst) me on GitHub. You can also subscribe on [Patreon](https://l.isiks.tech/patreon) or [YouTube](https://l.isiks.tech/member).
 
