@@ -128,6 +128,6 @@ cd ~/mainsail/ && grep -l additionalSensors * -R | xargs sed -i 's+additionalSen
 ![Pinout](../Images/SM2-Pinout.png)
 
 ## Klipper Config
-1. Download the [Klipper config](../Firmware/Max.cfg), and upload it to your printer.
+1. Download the [Klipper config](../Firmware/SM2.cfg), and upload it to your printer.
 2. Open the file and edit according to your setup.
-3. Add `[include max.cfg]` in your `printer.cfg`.
+3. Add `[include SM2.cfg]` in your `printer.cfg`.
