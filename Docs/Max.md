@@ -29,7 +29,7 @@ Press `Q` then `Y` to save and quit the menu.
 11. Build. `make`
 12. Flash. `make flash FLASH_DEVICE=0483:df11`
 13. When finished, press the `RESET` button on your Nevermore Max PCB.
-14. Use  `ls /dev/serial/by-id/*` to find the path startting with `/dev/serial/by-id/usb-Klipper_stm32g0b1`. This is the serial path of your Nevermore Max PCB.
+14. Use  `ls /dev/serial/by-id/*` to find the path starting with `/dev/serial/by-id/usb-Klipper_stm32g0b1`. This is the serial path of your Nevermore Max PCB.
 15. While you're SSH'd in, also download the python code needed for the SGP40 sensors from the [Nevermore Max repo](https://github.com/nevermore3d/Nevermore_Max).
 ```
 sudo wget https://raw.githubusercontent.com/nevermore3d/Nevermore_Max/master/Software/Klipper/sgp40.py -P ~/klipper/klippy/extras
