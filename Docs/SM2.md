@@ -123,9 +123,9 @@ sudo service klipper restart
 cd ~/mainsail/ && grep -l additionalSensors * -R | xargs sed -i 's+additionalSensors=\[+additionalSensors=\["sgp40",+g'
 ```
 ## PCB Mount & Wiring
-1. Mount the PCB where the Raspberry Pi Pico normally mounts with M2 screws.
-2. All connectors except USB are JST-PH. Use the diagram below to wire your fans/sensors/CAN/power.
-![Pinout](../Images/SM-Pinout.png)
+1. Mount the PCB where the Raspberry Pi Pico normally mounts with M2 screws. Use the 2 outer screw holes.
+2. All internal connectors except peltier are JST-PH, peltier is MX3.0. CAN/VIN connector is XT30(2+2). Use the diagram below to wire your fan/sensors/leds/thermistor/peltier/CAN/power.
+![Pinout](../Images/SM2-Pinout.png)
 
 ## Klipper Config
 1. Download the [Klipper config](../Firmware/Max.cfg), and upload it to your printer.
