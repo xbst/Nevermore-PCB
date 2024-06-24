@@ -70,7 +70,7 @@ Press `Q` then `Y` to save and quit the menu.
   
   1. Flash Klipper. `make flash FLASH_DEVICE=0483:df11`
   2. When finished, press the `RESET` button on your Nevermore StealthMax PCB.
-  3. Use  `ls /dev/serial/by-id/*` to find the path startting with `/dev/serial/by-id/usb-Klipper_stm32g0b1`. This is the serial path of your Nevermore StealthMax PCB.
+  3. Use  `ls /dev/serial/by-id/*` to find the path starting with `/dev/serial/by-id/usb-Klipper_stm32g0b1`. This is the serial path of your Nevermore StealthMax PCB.
   
 </details>
 <details>
@@ -84,7 +84,9 @@ Press `Q` then `Y` to save and quit the menu.
 <details>
   <summary>For CAN Bus Communication WITH Katapult</summary>
 
-  1. Install/Build Katapult using the [instructions](https://github.com/Arksine/katapult) on its repo. Use these settings to build Katapult:
+  1. Install [Katapult](https://github.com/Arksine/katapult). `cd ~ && git clone https://github.com/Arksine/katapult`
+  2. Go to the Katapult directory. `cd katapult`
+  3. Choose the options for the build. `make menuconfig` Use the following options:
     
   ```
     Micro-controller Architecture (STMicroelectronics STM32)  --->
@@ -100,11 +102,12 @@ Press `Q` then `Y` to save and quit the menu.
 [*] Enable Status LED
 (PA13)  Status LED GPIO Pin
   ```
-2. Flash Katapult. `sudo dfu-util -a 0 -d 0483:df11 --dfuse-address 0x08000000:leave -D out/canboot.bin`
-3. When finished, press the `RESET` button on your Nevermore StealthMax PCB.
-4. Use  `~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0` to find the CAN bus UUID of your Nevermore StealthMax PCB.
-5. Flash Klipper. Replace `<UUID>` with your PCB's UUID. `cd ~/katapult/scripts && python3 flashtool.py -i can0 -f ~/klipper/out/klipper.bin -u <uuid>`
+4. Build. `make`
+5. Flash Katapult. `sudo dfu-util -a 0 -d 0483:df11 --dfuse-address 0x08000000:leave -D out/canboot.bin`
 6. When finished, press the `RESET` button on your Nevermore StealthMax PCB.
+7. Use  `~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0` to find the CAN bus UUID of your Nevermore StealthMax PCB.
+8. Flash Klipper. Replace `<UUID>` with your PCB's UUID. `cd ~/katapult/scripts && python3 flashtool.py -i can0 -f ~/klipper/out/klipper.bin -u <uuid>`
+9. When finished, press the `RESET` button on your Nevermore StealthMax PCB.
 
 </details>
 
