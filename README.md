@@ -29,7 +29,7 @@
 ### United States
 |Store|Max|Mini & Stealthmax|Stealthmax 2|
 |---|---|---|---|
-|Isik's Tech (Me)|[PCB](https://store.isiks.tech/products/nevermore-max-controller-pcb)<br>~~[Bundle](https://store.isiks.tech/products/nevermore-max-bundle)~~ Discontinued|[PCB](https://store.isiks.tech/products/nevermore-stealthmax-pxb)<br>[Bundle](https://store.isiks.tech/products/nevermore-stealthmax-bundle)|[PCB](https://store.isiks.tech/products/nevermore-stealthmax-2-pcb)<br>[Bundle](https://store.isiks.tech/products/nevermore-stealthmax-2-bundle)|
+|Isik's Tech (Me)|[PCB](https://store.isiks.tech/products/nevermore-max-controller-pcb)<br>[Bundle](https://store.isiks.tech/products/nevermore-max-bundle)|[PCB](https://store.isiks.tech/products/nevermore-stealthmax-pxb)<br>[Bundle](https://store.isiks.tech/products/nevermore-stealthmax-bundle)|[PCB](https://store.isiks.tech/products/nevermore-stealthmax-2-pcb)<br>[Bundle](https://store.isiks.tech/products/nevermore-stealthmax-2-bundle)|
 |XR Bunker|[PCB](https://xrbunker.works/products/nevermore-max-2-red-pcb-by-xbst_isik)|-|-|
 
 This project is licensed under [GPL v3](./LICENSE), meaning vendors are allowed to sell PCBs without paying me. If you'd like to support the development of this and future projects please consider [sponsoring](https://github.com/sponsors/xbst) me on GitHub. You can also subscribe on [Patreon](https://l.isiks.tech/patreon) or [YouTube](https://l.isiks.tech/member).
