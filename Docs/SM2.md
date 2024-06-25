@@ -123,8 +123,21 @@ sudo service klipper restart
 cd ~/mainsail/ && grep -l additionalSensors * -R | xargs sed -i 's+additionalSensors=\[+additionalSensors=\["sgp40",+g'
 ```
 ## PCB Mount & Wiring
-1. Mount the PCB where the Raspberry Pi Pico normally mounts with M2 screws. Use the 2 outer screw holes.
-2. All internal connectors except peltier are JST-PH, peltier is MX3.0. CAN/VIN connector is XT30(2+2). Use the diagram below to wire your fan/sensors/leds/thermistor/peltier/CAN/power.
+1. Download and print the necessary files from this repo. You'll need to at least print the "Cap" for your printer size. You can use the stock latch with the Rasperry Pi logo, or download the version from this repo with the Isik's Tech logo.
+
+|Filter      |Cap|Latch|
+|------------|---|-----|
+|Stealthmax  |[Cap](../Mounts/Stealthmax/Cap.stl)|[Latch](../Mounts/Stealthmax/Latch.stl)|
+|Stealthmax S|[Cap](../Mounts/Stealthmax-S/Cap.stl)|[Latch](../Mounts/Stealthmax-S/Latch.stl)|
+
+2. Connect your CAN/Power XT30(2+2) cable now. If you are planning to use USB, connect that now too.
+3. Feed the cables you just connected through the cutout for the cap on your Stealthmax.
+4. Using 2x M2 screws from the Stealthmax BOM, loosely screw the Stealthmax PCB on the 2 screw holes closer to the edge of your Stealthmax. Don't thighten yet.
+5. Feed the cable(s) through the hole in the cap. Then, align the cap in the cutout for it on the Stealthmax.
+6. Align the clip on the cap with the notch on the PCB. The cap is designed to act like a third fastener, preventing the PCB from wobbling. Refer to the image below for alignment.
+![Cap Alignment](../Images/SM2-Cap.png)
+7. Push the cap in place. When it's secure, tighten the 2x M2 screws to fasten the PCB in place.
+8. Do the internal wiring. All internal connectors except peltier are JST-PH, peltier is MX3.0. CAN/VIN connector is XT30(2+2). Use the diagram below to wire your fan/sensors/leds/thermistor/peltier.
 ![Pinout](../Images/SM2-Pinout.png)
 
 ## Klipper Config
