@@ -17,7 +17,7 @@ You'll need to solder some male dupont wires on the PCB, so you need a soldering
 ## Instructions
 ![ST-Link Pads](../Images/ST-Link.png)
 
-Connect your ST-Link wires to the pads highlighted above.
+Connect your ST-Link wires to the pads highlighted above. If you have a Stealthmax PCB 2, the pads are on the backside, labeled.
 | Pin | ST-Link |
 |-----|---------|
 |1    |GND      |

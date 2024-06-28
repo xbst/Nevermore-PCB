@@ -1,37 +1,50 @@
-# Nevermore Max & StealthMax PCBs
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nevermore Max PCB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Nevermore StealthMax PCB |
-| --- | --- |
-| ![Nevermore Max PCB](./Images/Max.jpg) | ![Nevermore StealthMax PCB](./Images/SM.jpg) |
+# Nevermore Mini, Max & Stealthmax PCBs
+| Nevermore Max 2 PCB | Nevermore Mini & Stealthmax PCB | Nevermore Stealthmax PCB 2|
+| --- | --- | --- |
+|<img src="./Images/Max.jpg" width="360"/>|<img src="./Images/SM.jpg" width="360"/>|<img src="./Images/SM2.jpg" width="360"/>|
 
-<br>PCBs for Nevermore Max and Nevermore StealthMax air filters. 
-<br>More information about the Nevermore Max 2 air filter can be found [here](https://github.com/nevermore3d/Nevermore_Max), more information about the Nevermore StealthMax air filter can be found [here](https://github.com/nevermore3d/StealthMax).
+<br>PCBs for Nevermore Mini, Nevermore Max and Nevermore Stealthmax air filters. 
+<br>More information about the Nevermore Max 2 air filter can be found [here](https://github.com/nevermore3d/Nevermore_Max)
+<br>More information about the Nevermore Stealthmax air filter can be found [here](https://github.com/nevermore3d/StealthMax)
+<br>More information about the Nevermore Mini air filter can be found [here](https://www.printables.com/model/757663-nevermore-mini-3d-printer-hepa-and-carbon-air-filt).
+
 ### Features
-||Nevermore Max PCB|Nevermore StealthMax PCB|
-|---|---|---|
-|MCU|STM32G0B1 MCU|STM32G0B1 MCU|
-|Fans|1x 4-pin, 1x 3/2-pin|1x4-pin|
-|Sensors|2x HW I2C|2x HW I2C, 1x Optional Sensor Module Mount|
-|Neopixels|1x Neopixel|1x Neopixel|
-|CAN Bus|-|Yes (Optional)|
-|USB|USB C|USB micro B|
+|| Nevermore Max 2 PCB | Nevermore Mini & Stealthmax PCB | Nevermore Stealthmax PCB 2|
+|---|---|---|---|
+||<img src="./Images/Max.jpg" width="360"/>|<img src="./Images/SM.jpg" width="360"/>|<img src="./Images/SM2.jpg" width="360"/>|
+|MCU|STM32G0B1 MCU|STM32G0B1 MCU|STM32G0B1 MCU|
+|Fans|1x 4-pin, 1x 3/2-pin|1x4-pin|1x4-pin|
+|Sensors|2x HW I2C|2x HW I2C, 1x Optional Sensor Module Mount|2x HW I2C|
+|Neopixels|1x Neopixel|1x Neopixel|-|
+|CAN Bus|-|Yes, 1M|Yes, 1M|
+|12V Regulator|-|-|Yes, Max. 12V@5A, From 24V|
+|5V Regulator|-|-|Yes, From 24V, Turns Off w/ USB to Use USB 5V|
+|3.3V Regulator|Yes, From 5V|Yes, From 5V|Yes, From 5V|
+|UV LED Control|-|-|1x MOSFET, 1x PWM|
+|Peltier Control|-|-|1x MOSFET|
+|Thermistors|-|-|1x On-PCB 3950, 1x Connector|
+|Connectors|JST-XH, USB C|JST-PH, USB Micro-B|JST-PH, USB C, XT30(2+2), MX3.0 (for Peltier)|
 
-## Purchasing a PCB
+## Purchasing a Nevermore PCB
 ### United States
-|Store|Max|StealthMax|
-|---|---|---|
-|Isik's Tech (Me)|[Max](https://store.isiks.tech/products/nevermore-max-controller-pcb)|[StealthMax](https://store.isiks.tech/products/nevermore-stealthmax-pxb)|
-|XR Bunker|[Max](https://xrbunker.works/products/nevermore-max-2-red-pcb-by-xbst_isik)|-|
+|Store|Max|Mini & Stealthmax|Stealthmax 2|
+|---|---|---|---|
+|Isik's Tech (Me)|[PCB](https://store.isiks.tech/products/nevermore-max-controller-pcb)<br>[Bundle](https://store.isiks.tech/products/nevermore-max-bundle)|[PCB](https://store.isiks.tech/products/nevermore-stealthmax-pxb)<br>[Bundle](https://store.isiks.tech/products/nevermore-stealthmax-bundle)|[PCB](https://store.isiks.tech/products/nevermore-stealthmax-2-pcb)<br>[Bundle](https://store.isiks.tech/products/nevermore-stealthmax-2-bundle)|
+|XR Bunker|[PCB](https://xrbunker.works/products/nevermore-max-2-red-pcb-by-xbst_isik)|-|-|
 
 This project is licensed under [GPL v3](./LICENSE), meaning vendors are allowed to sell PCBs without paying me. If you'd like to support the development of this and future projects please consider [sponsoring](https://github.com/sponsors/xbst) me on GitHub. You can also subscribe on [Patreon](https://l.isiks.tech/patreon) or [YouTube](https://l.isiks.tech/member).
 
 You can also use the included gerber files to order your own from a PCB manufacturer like [PCBWay](https://www.pcbway.com/setinvite.aspx?inviteid=374841) or [JLCPCB](https://jlcpcb.com/).
 <br>
 
-### [Instructions](./Docs/INSTRUCTIONS.md)
+## Instructions
+- [Nevermore Max PCB](./Docs/Max.md)
+- [Nevermore Mini & Stealthmax PCB](./Docs/SM.md)
+- [Nevermore Stealthmax PCB 2](./Docs/SM2.md)
 
 ## YouTube
 
-I am a YouTube content creator, and these projects were designed for my videos. If you want content about these projects & more, please consider [subscribing to my YouTube channel](https://www.youtube.com/channel/UClAWYmCkHjsbaX9Wz1df2mg).
+I am a YouTube content creator. If you want content about these projects & more, please consider [subscribing to my YouTube channel](https://www.youtube.com/channel/UClAWYmCkHjsbaX9Wz1df2mg).
 <br>
 
 If you feel like contributing to the development of this project and other projects like this you can sponsor me on [GitHub](https://github.com/sponsors/xbst), subscribe on [Patreon](https://l.isiks.tech/patreon) or [YouTube](https://l.isiks.tech/member).
